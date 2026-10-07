@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jiko Kitchen | Sample restaurant website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#eef3ee;--ink:#17231d;--mute:#51604f;--green:#17402f;--mango:#f2a900;--chili:#c8321e;--line:#d6dfd6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1713;--soft:#16221b;--ink:#eef3ee;--mute:#9db09f;--green:#2a6b4e;--line:#27382d}}
+:root[data-theme="dark"]{--bg:#0f1713;--soft:#16221b;--ink:#eef3ee;--mute:#9db09f;--green:#2a6b4e;--line:#27382d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+.bar{background:var(--mango);color:#1a1300;font-size:14px;text-align:center;padding:8px 14px;font-weight:500}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.hero{background:var(--green);color:#fff;padding:56px 0 64px}
+.hero h1{font-size:clamp(46px,13vw,104px);font-weight:800;letter-spacing:-.03em}
+.hero p{max-width:34ch;font-size:19px;margin:18px 0 28px;color:#d8e6dc}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:15px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.main{background:var(--mango);color:#1a1300}
+.btn.alt{border:2px solid #fff;color:#fff}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--chili);outline-offset:3px}
+section{padding:56px 0}
+h2{font-size:clamp(32px,8vw,48px);font-weight:800;margin-bottom:8px}
+.sub{color:var(--mute);margin:0 0 28px}
+.cat{margin-top:30px}
+.cat h3{font-size:24px;border-bottom:3px solid var(--mango);display:inline-block;padding-bottom:4px;margin-bottom:6px}
+.item{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.item b{display:block}
+.item span{color:var(--mute);font-size:15px}
+.price{font-weight:700;white-space:nowrap}
+.soft{background:var(--soft)}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tile{aspect-ratio:1/1;border-radius:14px;display:flex;align-items:flex-end;padding:12px;font-size:14px;font-weight:500;color:#fff}
+.t1{background:var(--green)}.t2{background:var(--chili)}.t3{background:#8a5a00}.t4{background:#2f5d8a}
+.info{display:grid;gap:28px}
+.hours div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}
+.map{display:grid;place-items:center;min-height:220px;border-radius:16px;background:var(--bg);border:2px dashed var(--line);text-align:center;padding:20px;color:var(--mute)}
+footer{background:var(--green);color:#d8e6dc;padding:32px 0;font-size:15px}
+footer a{color:var(--mango)}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#1fa855;color:#fff;border-radius:999px;padding:14px 20px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+@media (min-width:760px){.tiles{grid-template-columns:repeat(4,1fr)}.info{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="bar">Sample design by Clickwave Digital. Your restaurant's name, photos and menu go here.</div>
+
+<header class="hero">
+<div class="wrap">
+<h1>Jiko<br>Kitchen</h1>
+<p>Nyama choma, pilau and fresh juices. Cooked over charcoal, served daily in Nairobi.</p>
+<div class="btns">
+<a class="btn main" href="https://wa.me/254700000000?text=Hi%20Jiko%20Kitchen%2C%20I%27d%20like%20to%20order">Order on WhatsApp</a>
+<a class="btn alt" href="tel:+254700000000">Call us</a>
+</div>
+</div>
+</header>
+
+<main>
+<section id="menu">
+<div class="wrap">
+<h2>Menu</h2>
+<p class="sub">Prices in KES. Ask us about daily specials.</p>
+
+<div class="cat"><h3>From the grill</h3>
+<div class="item"><div><b>Goat nyama choma (500g)</b><span>With kachumbari and ugali</span></div><div class="price">900</div></div>
+<div class="item"><div><b>Chicken quarter</b><span>Charcoal grilled, house pili pili</span></div><div class="price">550</div></div>
+<div class="item"><div><b>Tilapia, whole</b><span>Fried or grilled, with ugali or chips</span></div><div class="price">750</div></div>
+</div>
+
+<div class="cat"><h3>Rice and sides</h3>
+<div class="item"><div><b>Beef pilau</b><span>Spiced rice, kachumbari</span></div><div class="price">450</div></div>
+<div class="item"><div><b>Chapati (2)</b><span>Fresh off the pan</span></div><div class="price">80</div></div>
+<div class="item"><div><b>Sukuma wiki</b><span>Sautéed with onions and tomato</span></div><div class="price">100</div></div>
+</div>
+
+<div class="cat"><h3>Drinks</h3>
+<div class="item"><div><b>Fresh passion juice</b><span>No added sugar</span></div><div class="price">200</div></div>
+<div class="item"><div><b>Kenyan chai</b><span>Boiled with milk and ginger</span></div><div class="price">100</div></div>
+</div>
+</div>
+</section>
+
+<section class="soft" id="photos">
+<div class="wrap">
+<h2>Photos</h2>
+<p class="sub">Real photos of your food and place replace these blocks.</p>
+<div class="tiles">
+<div class="tile t1">Grilled goat</div>
+<div class="tile t2">Pilau</div>
+<div class="tile t3">Fresh chapati</div>
+<div class="tile t4">Dining area</div>
+</div>
+</div>
+</section>
+
+<section id="visit">
+<div class="wrap info">
+<div>
+<h2>Visit us</h2>
+<p class="sub">Ngong Road, Nairobi (example address)</p>
+<div class="hours">
+<div><span>Mon to Fri</span><b>11:00 am to 10:00 pm</b></div>
+<div><span>Saturday</span><b>10:00 am to 11:30 pm</b></div>
+<div><span>Sunday</span><b>10:00 am to 9:00 pm</b></div>
+</div>
+<p style="margin-top:22px"><a class="btn main" href="https://wa.me/254700000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20table%20for%20__%20people%20at%20__">Book a table on WhatsApp</a></p>
+</div>
+<div class="map">Google Map of your restaurant<br>goes here, with a Directions button.</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p>Jiko Kitchen is an example. This page was designed by <a href="https://wa.me/254700000000">Clickwave Digital</a> to show what your restaurant's website could look like, on your own .co.ke domain.</p>
+</div>
+</footer>
+
+<a class="fab" href="https://wa.me/+254143510622?text=Hi%20Jiko%20Kitchen%2C%20I%27d%20like%20to%20order">WhatsApp</a>
+</body>
+</html>
